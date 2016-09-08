@@ -2,7 +2,6 @@ process.env.NODE_ENV = 'test';
 
 var chai = require('chai');
 var chaiHttp = require('chai-http');
-
 var knex = require('../../src/server/db/knex');
 var queries = require('../../src/server/db/queries');
 var databaseHelpers = require('../../src/server/db/helpers');
