@@ -1,0 +1,38 @@
+{% extends "_base.html" %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+  <h1>Galvanize Reads</h1>
+
+  <div class="container">
+    {% for book in books %}
+      <div class="row">
+        <div class="col-md-4">
+          <img src="{{book.book_cover}}" class="books">
+        </div>
+        <div class="col-md-6 book-description">
+          <h2>{{book.book_title}}</h2>
+          <p> By:
+            {{book.author1}}
+            {% if book.author2 %},
+              {{book.author2}}
+            {% endif %}
+            {% if book.author3 %},
+              {{book.author3}}
+            {% endif %}
+          </p>
+          <p> Genre:
+            {{book.genre}}
+          </p>
+          <div>Description: <br><br>
+            {{book.description}}
+             </div>
+
+        </div>
+      </div>
+        {% endfor %}
+    </div>
+
+
+{% endblock %}
