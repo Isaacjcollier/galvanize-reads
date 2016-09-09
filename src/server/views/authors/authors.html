@@ -1,0 +1,32 @@
+{% extends "_base.html" %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+
+  <h1>Galvanize Reads</h1>
+
+  <div class="container">
+    {% for author in authors %}
+    <hr>
+      <div class="row author-row">
+        <div class="col-md-4">
+          <img src="{{ author.portrait }}" class="author-img">
+        </div>
+        <div class="col-md-6">
+          <h3>{{author.name}}</h3>
+          <p>
+            {{author.biography}}
+          </p>
+          {% for book in author.writtenBooks %}
+          <h3>books Written: {{book.book_title}}</h3>
+          {% endfor %}
+        </div>
+
+
+      </div>
+    {% endfor %}
+
+  </div>
+
+{% endblock %}

@@ -21,7 +21,7 @@ router.get('/', function (req, res, next) {
     .leftJoin('authors as a3', 'author3_id', '=', 'a3.id')
   .then((books) => {
     console.log(books);
-    res.render('books.html', {books});
+    res.render('books/books.html', {books});
   })
   .catch((err) => {
     return next(err);

@@ -3,13 +3,14 @@
 {% block title %}{% endblock %}
 
 {% block content %}
+
   <h1>Galvanize Reads</h1>
 
   <div class="container">
     {% for book in books %}
       <div class="row">
         <div class="col-md-4">
-          <img src="{{book.book_cover}}" class="books">
+          <img src="{{book.book_cover}}" class="books-img">
         </div>
         <div class="col-md-6 book-description">
           <h2>{{book.book_title}}</h2>
@@ -32,6 +33,10 @@
         </div>
       </div>
         {% endfor %}
+    </div>
+
+    <div class="btn">
+      <a href="./authors">Authors</a>
     </div>
 
 
