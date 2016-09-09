@@ -3,7 +3,7 @@ const router = express.Router();
 
 const knex = require('../db/knex');
 
-router.get('/', function (req, res, next) {
+router.get('/', (req, res, next) => {
   knex('books').select(
     'books.id as book_id',
     'book_title',
@@ -27,5 +27,9 @@ router.get('/', function (req, res, next) {
     return next(err);
   });
 });
+
+router.get('/:id', (req, res, next) => {
+  
+})
 
 module.exports = router;
