@@ -7,34 +7,37 @@
   <h1>Galvanize Reads</h1>
 
   <div class="container">
+    <hr>
       <div class="row">
         <div class="col-md-4">
-          <img src="{{book.book_cover}}" class="books-img">
+          <img src="{{books[0].book_cover}}" class="books-img">
         </div>
         <div class="col-md-6 book-description">
-          <h2>{{book.book_title}}</h2>
+          <p>
+          </p>
+          <h2>{{books[0].book_title}}</h2>
           <p> By:
-            {{book.author1}}
+            {{books[0].author1}}
             {% if book.author2 %},
-              {{book.author2}}
+              {{books[0].author2}}
             {% endif %}
-            {% if book.author3 %},
-              {{book.author3}}
+            {% if books[0].author3 %},
+              {{books[0].author3}}
             {% endif %}
           </p>
           <p> Genre:
-            {{book.genre}}
+            {{books[0].genre}}
           </p>
           <div>Description: <br><br>
-            {{book.description}}
+            {{books[0].description}}
              </div>
-
+             <hr>
         </div>
       </div>
     </div>
 
-    <div class="btn">
-      <a href="./authors">Authors</a>
+    <div class="btn btn-warning">
+      <a href="/authors">Authors</a>
     </div>
 
 

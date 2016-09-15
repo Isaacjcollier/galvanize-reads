@@ -8,12 +8,13 @@
 
   <div class="container">
     {% for book in books %}
+    <hr>
       <div class="row">
         <div class="col-md-4">
           <img src="{{book.book_cover}}" class="books-img">
         </div>
         <div class="col-md-6 book-description">
-          <h2><a href="book/{{book.book_id}}"></a>{{book.book_title}}</h2>
+          <h2><a href="books/{{book.book_id}}">{{book.book_title}}</a></h2>
           <p> By:
             {{book.author1}}
             {% if book.author2 %},
@@ -29,14 +30,14 @@
           <div>Description: <br><br>
             {{book.description}}
              </div>
-
+             <hr>
         </div>
       </div>
         {% endfor %}
     </div>
 
     <div class="btn">
-      <a href="./authors">Authors</a>
+      <a href="/authors">Authors</a>
     </div>
 
 
